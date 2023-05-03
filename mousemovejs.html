@@ -1,0 +1,18 @@
+<html>
+<script src="D:/560/angularjs.js">
+
+</script>
+<body>
+<div ng-app="myapp" ng-controller="myctrl">
+<h1 ng-mousemove="count=count+1">MOUSE MOVE</h1>
+<h2>{{count}}</h2>
+</div>
+<script>
+var app=angular.module('myapp',[]);
+app.controller('myctrl',function($scope)
+{
+$scope.count=0;
+});
+</script>
+</body>
+</html>

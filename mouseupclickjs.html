@@ -1,0 +1,20 @@
+<html>
+<script src="D:/560/angularjs.js">
+</script>
+<body>
+<div ng-app="myapp" ng-controller="myCtrl">
+<button ng-mouseup="count=count+1">
+mouseup
+</button>
+<p> {{count}}</p>
+</div>
+<script>
+var app=angular.module('myapp',[]);
+app.controller('myCtrl',function($scope)
+{
+$scope.count=0;
+});
+
+</script>
+</body>
+</html>

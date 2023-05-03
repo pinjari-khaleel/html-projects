@@ -1,0 +1,56 @@
+<html>
+<script src="D:/560/angularjs.js"></script>
+<body>
+<div ng-app="myApp" ng-controller="myCtrl">
+ <button ng-click="myFunc()">Click Me! </button>
+  <div ng-show = "showMe">
+    <h1> Registration </h1>
+	<div>Pizza </div>
+	<div>Pasta </div>
+	<div>Noodles </div>
+	</div>
+  </div>
+  <script>
+   var app = angular.module('myApp',[]);
+   app.controller('myCtrl',function($scope)
+   {
+     $scope.showMe = false;
+	 $scope.myFunc = function() {
+	   $scope.showMe = !$scope.showMe;
+	 }
+   });
+  </script>
+  
+ <form>
+  Check to show a header:
+  
+  <input type="checkbox" ng-model="myVar">
+  Pick a topic :
+  <input type="radio" ng-model="myVar" value="dogs">Dogs
+  <input type="radio" ng-model="myVar" value="tuts">Tutorials
+  <input type="radio" ng-model="myVar" value="cars">Cars
+  
+  </form>
+  <h1 ng-show="myVar" > This is check box data! HI </h1>
+  </div>
+  <p>The headers ng-show attribute is set to true when box </p>
+
+  
+  
+  <div ng-switch="myVar">
+     <div ng-switch-when="dogs">
+	   <h1> Dogs </h1>
+	   <p>Welcome to world of dogs </p>
+	   </div>
+	   <div ng-switch-when="tuts">
+	   <h1> Tutorials </h1>
+	   <p>Learn from examples </p>
+	   </div>
+	   <div ng-switch-when="cars">
+	   <h1> Cars </h1>
+	   <p>Read about cars </p>
+	   </div>
+  </div>
+ 
+  </body>
+  </html>
